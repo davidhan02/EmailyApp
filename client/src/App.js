@@ -17,6 +17,13 @@ class App extends Component {
           >
             Learn React
           </a>
+          <a 
+            href="/auth/google"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Log in
+          </a>
         </header>
       </div>
     );

@@ -35,4 +35,4 @@ const surveySchema = new Schema({
   lastResponded: Date
 });
 
-module.exports = mongoose.model('surveys', surveySchema);
+mongoose.model('surveys', surveySchema);

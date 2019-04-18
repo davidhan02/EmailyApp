@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const RecipientSchema = require('./Recipient');
 
 const surveySchema = new Schema({
   title: {
@@ -15,7 +16,7 @@ const surveySchema = new Schema({
     required: true
   },
   recipients: {
-    type: [String],
+    type: [RecipientSchema],
     required: true
   },
   yes: {

@@ -17,6 +17,14 @@ const surveySchema = new Schema({
   recipients: {
     type: [String],
     required: true
+  },
+  yes: {
+    type: Number,
+    default: 0
+  },
+  no: {
+    type: Number,
+    default: 0
   }
 });
 

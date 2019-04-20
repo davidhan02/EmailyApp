@@ -49,6 +49,10 @@ module.exports = app => {
     res.send({});
   });
 
+  app.get('/api/surveys', requireLogin, async (req, res) => {
+    const surveys = await Survey.find({ _user: req.user.id });
+  });
+
   app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
     const { title, subject, body, recipients } = req.body;
 
@@ -61,7 +65,6 @@ module.exports = app => {
       dateSent: Date.now()
     });
 
-    // Send an email
     const mailer = new Mailer(survey, surveyTemplate(survey));
     try {
       await mailer.send();

@@ -1,18 +1,16 @@
 const keys = require('../../config/keys');
 
-module.exports = survey => {
+module.exports = ({ id, body }) => {
   return `
     <html>
       <body>
         <div style="text-align: center; color: black;">
           <h3>I'd like your input!</h3>
           <p>Please answer the following question:</p>
-          <p>${survey.body}</p>
+          <p>${body}</p>
           <div>
-            <a href="${keys.redirectDomain}/api/surveys/${
-    survey.id
-  }/yes">Yes</a>
-            <a href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a>
+            <a href="${keys.redirectDomain}/api/surveys/${id}/yes">Yes</a>
+            <a href="${keys.redirectDomain}/api/surveys/${id}/no">No</a>
           </div>
         </div>
       </body>

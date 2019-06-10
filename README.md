@@ -1,5 +1,6 @@
 # EmailyApp
 Testing out use of MongoDB, Express, React + Redux, and Node
+
 Live Heroku Deployment (may take a few moments to load up): https://peaceful-wave-76892.herokuapp.com/
 
 ## Table of Contents
